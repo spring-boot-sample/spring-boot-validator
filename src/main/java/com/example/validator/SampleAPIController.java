@@ -14,7 +14,7 @@ public class SampleAPIController {
 
 
     @PostMapping(value = "/test")
-    public String test(@RequestBody  @Validated SampleRequestBody requestBody){
+    public int test(@RequestBody  @Validated SampleRequestBody requestBody){
         return requestBody.getId();
     }
 }

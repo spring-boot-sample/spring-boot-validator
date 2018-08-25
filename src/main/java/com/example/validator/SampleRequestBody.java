@@ -12,5 +12,5 @@ import java.io.Serializable;
 @Data
 public class SampleRequestBody implements Serializable {
     @IdValidator
-    private String id;
+    private int id;
 }

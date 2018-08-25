@@ -7,7 +7,7 @@ import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
 
-public class IdValidatorImpl implements ConstraintValidator<IdValidator,String > {
+public class IdValidatorImpl implements ConstraintValidator<IdValidator,Integer > {
 
     private int min;
 
@@ -20,9 +20,8 @@ public class IdValidatorImpl implements ConstraintValidator<IdValidator,String >
     }
 
     @Override
-    public boolean isValid(String value, ConstraintValidatorContext context) {
-        final int length = value.length();
-        if(length < min || length > max){
+    public boolean isValid(Integer value, ConstraintValidatorContext context) {
+        if(value < min || value > max){
             return false;
         }
         return true;
